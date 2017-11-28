@@ -26,9 +26,7 @@ py_test(
     name = "whl_test",
     srcs = ["whl_test.py"],
     data = [
-        "@futures_3_1_1_whl//file",
-        "@futures_2_2_0_whl//file",
-        "@google_cloud_language_whl//file",
+        "@futures_whl//file",
         "@grpc_whl//file",
         "@mock_whl//file",
     ],
