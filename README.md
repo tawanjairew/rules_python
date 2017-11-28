@@ -24,6 +24,7 @@ Add the following to your `WORKSPACE` file to add the external repositories:
 git_repository(
     name = "io_bazel_rules_python",
     remote = "https://github.com/bazelbuild/rules_python.git",
+    # NOT VALID!  Replace this with a Git commit SHA.
     commit = "{HEAD}",
 )
 
@@ -104,6 +105,10 @@ should be able to reliably depend directly on e.g. `@pypi__futures_3_1_1//:pkg`
 for dependencies, however, it is recommended that folks stick with the
 `requirement` pattern in case the need arises for us to make changes to this
 format in the future.
+
+["Extras"](
+https://packaging.python.org/tutorials/installing-packages/#installing-setuptools-extras)
+will have a target of the extra name (in place of `pkg` above).
 
 ## Updating `docs/`
 
